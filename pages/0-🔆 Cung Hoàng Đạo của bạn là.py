@@ -1,6 +1,6 @@
 import streamlit as st
-x=int(st.text_input("Nhập ngày sinh:",0))
-y=int(st.text_input("Nhập tháng sinh:",0))
+x=int(st.number_input("Nhập ngày sinh:",min_value=1, max_value=31, step=1))
+y=int(st.number_input("Nhập tháng sinh:",min_value=1, max_value=12, step=1))
 if (21<=x<=31 and y==3) or (1<=x<=19 and y==4):
     st.write("Chúc mừng cung của bạn là")
     st.write("Bạch Dương-Aries")
